@@ -80,8 +80,7 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        #se der ruim já sabe: 'NAME': BASE_DIR / 'blog_django',
-        'NAME': 'blog_django',
+        'NAME': os.path.join(BASE_DIR, 'blog_django'),
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'USER': 'root',
@@ -141,7 +140,12 @@ MESSAGE_TAGS = {
     constants.INFO: 'alert-info',
 }
 
+#X_FRAME_OPTIONS = 'SAMEORIGIN'
+#INSTALLED_APPS += ('django_summernote',)
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
