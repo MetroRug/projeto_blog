@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 
 <head>
-    <title>Início em Blog do Lucas</title>
+    <title>{% block titulo %}{% endblock %}Blog Django</title>
     {% include 'parciais/_head.html' %}
 </head>
 
 <body>
 
 {% include 'parciais/_nav.html' %}
+
 <!-- Page Content -->
 <div class="container">
     <div class="row">
@@ -19,7 +20,6 @@
 </div>
 
 {% include 'parciais/_footer.html' %}
-
 </body>
 
 </html>
